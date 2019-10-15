@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after{
+	/*
+     
+	*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+	-webkit-box-sizing:border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body{
+	font-size: 14px;
+	font-family: 'Microsoft YaHei', sans-serif;
+	color: #333;
+}
+ul, ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+input, textarea{
+	border: none;
+	outline: none;
+	resize: none;/*看不到下面的三角符号，不允许改变尺寸*/
+    -webkit-appearance: none;
+}
+
+.f_left{
+	float: left;
+}
+.f_right{
+	float: right;
+}
+
+.clearFix::before,
+.clearFix::after{
+	content: "";
+	display: block;
+	visibility: hidden;
+	line-height: 0;
+	clear:both;
+}
+
+.m-l10{
+	margin-left: 10px;
+}
+
+.m-r10{
+	margin-right: 10px;
+}
+.m-t10{
+	margin-top: 10px;
+}
+.m-b10{
+	margin-bottom: 10px;
+}
+/*既能选择到以icon开头的，也可以用到包含icon的*/
+[class^="icon_"],[class*=" icon_"]{
+	background-repeat: no-repeat;
+	background-image: url("../images/sprites.png");
+	background-size: 200px 200px;
+}
